@@ -5,30 +5,13 @@
 {% endblock %}
 
 {% block body %}
-<h1>ALL POSTS</h1>
+<div>
+<br>
+    <h1 style="display:inline" >ALL POSTS</h1>
+    <a style="display:inline" class="btn btn-success float-right" href="/posts/new" >+ New Post</a>
+
+</div>
 <hr>
-<h2>Create New Blog Post: </h2>
-<form action='/posts' method='POST'>
-
-    <label for="title">Title</label>
-<!-- <input type="text" name="title" id="title"> basic form -->
-    <input class="form-control" type="text" name="title" id="title" placeholder="Enter Title" aria-label="Enter Title">
-    <br>
-    <label for="author">Author</label>
-<!--<input type="text" name="author" id="author"-->
-    <input class="form-control" type="text" name="author" id="author" placeholder="Enter author" aria-label="Enter author">
-    <br>
-
-    <label for="content">Post</label>
-<!-- <input type="text" name="content" id="content" -->
-    <textarea class="form-control" name="content" id="content" placeholder="Enter Content" aria-label="Enter Content" rows="3"></textarea>
-
-    <br>
-    <input type="submit" value="POST">
-</form>
-<hr>
-
-
 {% for post in posts %}
 <br>
     <h2>{{  post.title }}</h2>

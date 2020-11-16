@@ -1,9 +1,25 @@
-    {% extends 'base.html' %}
+{% extends 'base.html' %}
 
-    {% block head %}
-    <title> Home </title>
-    {% endblock %}
+{% block head %}
+<title> Home </title>
 
-    {% block body %}
-    <h1>Home page</h1>
-    {% endblock %}
+{% endblock %}
+
+{% block body %}
+<br>
+<h1>Home Page</h1>
+<br>
+<hr>
+<main role="main">
+    <div class="jumbotron">
+      <div class="col-sm-8 mx-auto">
+        <h1>Welcome</h1>
+        <p>Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions.</p>
+        <p>However,  <a href="https://www.fullstackpython.com/flask.html"> Flask </a> supports extensions that can add application features as if they were implemented in Flask itself. Extensions exist for object-relational mappers, form validation, upload handling, various open authentication technologies and several common framework related tools.</p>
+        <p>
+          <a class="btn btn-primary" href="/posts" role="button">Go To Posts »</a>
+        </p>
+      </div>
+    </div>
+  </main>
+{% endblock %}
